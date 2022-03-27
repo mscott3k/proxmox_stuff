@@ -1,4 +1,4 @@
-###Proxmox Stuff
+### Proxmox Stuff
 
-[install]
-[mining VMs]
+- [install] 
+- [mining VMs]
