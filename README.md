@@ -125,6 +125,7 @@ Steps taken to install pve7.x
       ```
       sudo usermod -aG docker $USER
       ```
+    - Logout to init group changes
 
   - **Install Portainer**
     - Setup zfs dataset
@@ -134,11 +135,11 @@ Steps taken to install pve7.x
       ```
     - Create docker volume
       ```
-      sudo docker volume create portainer_data
+      docker volume create portainer_data
       ```
     - Create portainer container
       ```
-      sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+      docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
       ```
     - Setup portainer
       - Go to ```http://[serverIP]:9000``` and configure
